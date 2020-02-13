@@ -2,17 +2,15 @@
 
 ## Setup
 
-1. Build the docker image
+1. Run the container
 ```bash
-$ make build
+docker-compose up -d
 ```
-2. Bind port & run docker image
+
+2. Log in to account 'user', password 'ctf'
 ```bash
-$ make run
-0.0.0.0:[PORT]
+$ ssh user@localhost -p 5000
 ```
-3. Log in to account 'user', password 'ctf'
-`$ ssh user@localhost -p [PORT]`
 
 ## Solution
 
