@@ -39,8 +39,6 @@ User user may run the following commands on ...:
 
 3. Many things can be done at this point, easiest may be to just run bash
 ```bash
-
-```bash
 $ sudo -u alice /bin/bash
 alice@...:~$
 ```
