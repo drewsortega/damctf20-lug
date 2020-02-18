@@ -1,0 +1,10 @@
+version: '3'
+services:
+  main:
+    build: main
+    ports: 
+      - "5000:22"
+    links:
+      - "remote:tina_pc"
+  remote:
+    build: remote
