@@ -15,4 +15,4 @@ RUN chmod -R -w /home/tina
 RUN chmod 500 /home/tina/.ssh/authorized_keys
 RUN chmod 000 /root
 
-RUN echo "7t6SUR%P" > /home/tina/flag
+RUN echo "dam{7t6SUR%P}" > /home/tina/flag
