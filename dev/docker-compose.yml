@@ -1,0 +1,8 @@
+version: '3'
+services:
+  challenge_dev:
+    build: .
+    ports: 
+      - "5000:22"
+    devices:
+      - "/dev/loop2:/dev/sda1"

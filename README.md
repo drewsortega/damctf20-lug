@@ -6,3 +6,6 @@ Written by: Drew Ortega
 
 ### 2 - SSH known_hosts
 Written by: Drew Ortega
+
+### 3 - Odd device
+Written by: Drew Ortega
