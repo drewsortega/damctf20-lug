@@ -4,12 +4,14 @@
 
 1. Build and add the pseudo-device - will add loop device /dev/loop2 (/dev/loop0 and loop1 are reserved for docker)
 ```bash
-./setup_device.sh
+$ make build
+# add /dev/loop2 device
+$ sudo make deploy
 ```
 
 2. Build the docker image
 ```bash
-# docker-compose build
+$ docker-compose build
 ```
 
 3. Run the image
@@ -20,6 +22,13 @@ $ docker-compose up
 4. Connect to user 'jfobb' password 'ctf'
 ```bash
 $ ssh jfobb@localhost -p 5000
+```
+
+5. To clean up:
+```bash
+$ make clean
+# remove loop device
+$ sudo make unstage
 ```
 
 ## Solution
