@@ -36,6 +36,18 @@ RUN chown root.root /root
 RUN chmod 555 /home/jfobb
 RUN chmod 500 /root
 
+# make read-only - will get errors about proc since I'm lazy to disclude it.
+# by removing write privledges to everything.
+RUN chmod -R ugoa-w / || true
+RUN chmod -R 500 /root
+
+# make it less easy to steal solutions from other participants
+RUN chmod 000 /bin/ps
+RUN chmod 000 /usr/bin/top
+RUN chmod 000 /bin/kill
+RUN chmod 000 /usr/bin/nice
+RUN chmod 000 /usr/bin/renice
+
 # set startup script
 COPY "entrypoint.sh" "/root/entrypoint.sh"
 ENTRYPOINT [ "/root/entrypoint.sh" ]

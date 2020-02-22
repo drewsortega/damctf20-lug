@@ -21,6 +21,7 @@ build: usb.img
 
 deploy: usb.img
 	losetup /dev/${LOOP} ./usb.img
+	chmod 555 /dev/${LOOP}
 
 clean:
 	rm -r usb/Documents important important.tar.gz usb.img
