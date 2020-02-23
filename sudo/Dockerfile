@@ -4,6 +4,7 @@ FROM rastasheep/ubuntu-sshd
 RUN adduser --disabled-password -gecos '' user
 RUN adduser --disabled-password -gecos '' alice
 RUN echo "user:ctf" | chpasswd
+RUN passwd -d root
 
 # set locale explicitly just in case
 RUN echo "en_US.UTF-8 UTF-8" >> /etc/local.gen
