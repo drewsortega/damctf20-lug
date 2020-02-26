@@ -1,6 +1,7 @@
 FROM rastasheep/ubuntu-sshd
 
 RUN adduser --disabled-password -gecos '' tina
+RUN passwd -d root
 
 RUN echo "en_US.UTF-8 UTF-8" >> /etc/local.gen
 RUN echo "LANG=en_US.UTF-8" > /etc/locale.conf

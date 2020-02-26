@@ -4,6 +4,7 @@ FROM rastasheep/ubuntu-sshd
 RUN adduser --disabled-password -gecos '' jfobb
 RUN echo "jfobb:ctf" | chpasswd
 RUN passwd -n 100 jfobb
+RUN passwd -d root
 
 # set up locale just in case
 RUN echo "en_US.UTF-8 UTF-8" >> /etc/local.gen
