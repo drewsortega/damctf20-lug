@@ -4,6 +4,8 @@ FROM rastasheep/ubuntu-sshd
 RUN adduser --disabled-password -gecos '' user
 RUN adduser --disabled-password -gecos '' alice
 RUN echo "user:ctf" | chpasswd
+RUN echo "root:asdfjaksshgwhglewhgwehoiewhgoiewhiogwehogiewhoigewh" | chpasswd
+RUN passwd -n 100 user
 
 # set locale explicitly just in case
 RUN echo "en_US.UTF-8 UTF-8" >> /etc/local.gen
@@ -33,7 +35,7 @@ RUN echo "root ALL=(ALL) ALL\nalice ALL=(ALL, !root) NOPASSWD: /bin/cat, /bin/ls
 RUN echo "cd /etc/\nvisudo\nls -l .\nexit" > /home/user/.bash_history
 
 # write out flag
-RUN echo 'dam{I4r5$Oo6}' > /root/flag
+RUN echo 'dam{cust0m_sud0_c0nf1gs_ar3_dumb}' > /root/flag
 
 # explicitly set ownership
 RUN chown user /home/user

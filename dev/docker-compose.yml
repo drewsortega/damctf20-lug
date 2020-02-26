@@ -3,6 +3,6 @@ services:
   challenge_dev:
     build: .
     ports: 
-      - "5000:22"
+      - "11312:22"
     devices:
-      - "/dev/loop2:/dev/sda1"
+      - "/dev/loop8:/dev/sda1"

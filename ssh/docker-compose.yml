@@ -3,7 +3,7 @@ services:
   main:
     build: main
     ports: 
-      - "5000:22"
+      - "11279:22"
     links:
       - "remote:tina_pc"
   remote:

@@ -13,7 +13,7 @@ RUN chown tina /home/tina/.ssh/authorized_keys
 RUN chmod 500 /home/tina/.ssh/authorized_keys
 RUN chmod 000 /root
 
-RUN echo "dam{7t6SUR%P}" > /home/tina/flag
+RUN echo "dam{kn0wn_h0sts_m0r3_l1k3_fr33_f14gs}" > /home/tina/flag
 
 # explicitly set ownership
 RUN chown tina /home/tina
